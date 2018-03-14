@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+     Calculator
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-item>
+  <ion-label floating>Enter First Number:</ion-label>
+  <ion-input type="number" [(ngModel)]="numberA"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label floating>Enter Second Number:</ion-label>
+  <ion-input type="number" [(ngModel)]="numberB"></ion-input>
+</ion-item>
+
+<br>
+<br>
+
+<ion-item>
+
+<button ion-button outline color="primary" (click)="calci('a')">ADD</button>
+<button ion-button outline color="danger" (click)="calci('s')">SUB</button>
+<button ion-button outline color="secondary" (click)="calci('m')">MUL</button>
+<button ion-button outline color="danger" (click)="calci('d')">DIV</button>
+
+</ion-item>
+
+<br>
+<br>
+
+<ion-item>
+    <ion-label> Action </ion-label>
+    <ion-label> {{operationName}} </ion-label>
+</ion-item>
+
+  <ion-item>
+    <ion-label> Result </ion-label>
+    <ion-label> {{result}} </ion-label>
+  </ion-item>
+
+
+</ion-content>
